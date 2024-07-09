@@ -63,14 +63,34 @@ tbody, td, tfoot, th, thead, tr {
 .thead {
   height: 70px;
   border-radius: 10px;
-  background: rgba(35, 163, 6, 0.48);
+  background: rgb(4 34 142);
   font-weight: 500;
-  border: 1px solid #23a306;
+  color: white;
 
   td {
-    border-right: 1px solid gray;
     text-align: center;
+    background: rgb(4 34 142);
+    border: none;
   }
+}
+
+.thead td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.thead td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+th {
+  border-radius: 3px;
+}
+
+th {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
