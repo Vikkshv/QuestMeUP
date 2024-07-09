@@ -352,19 +352,6 @@
         </div>
     </div>
 </div>
-<style>
-  .hystmodal__close.hidden {
-    display: none;
-  }
-
-  .modal_body video {
-    width: 100%;
-  }
-
-  .hystmodal__window {
-    width: 1000px;
-  }
-</style>
 <script>
     let current_play,
         modal;
@@ -403,6 +390,22 @@
             this.style.opacity = '0';
             navContainer.style.transform = 'translateX(-120%)';
         });
+
+        const addCapabilityButton = document.querySelector('.quest_block_body div[onclick]');
+        const table = document.getElementById('capability_commitments_table');
+
+        addCapabilityButton.onclick = function () {
+            const row = table.insertRow(-1);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+
+            cell1.innerHTML = '<textarea style="width:100%"></textarea>';
+            cell2.innerHTML = `<select><option value="resource">Resource</option><option value="competence">Competence</option><option value="habit">Habit</option></select>`;
+            cell3.innerHTML = '<textarea style="width:100%"></textarea>';
+            cell4.innerHTML = '<input placeholder="yyyy-mm-dd" type="text">';
+        };
     });
 
 
