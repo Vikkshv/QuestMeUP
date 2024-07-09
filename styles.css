@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: #03228c auto 1px;
+}
+
 body {
   font-weight: 400;
   font-size: 16px;
@@ -28,10 +32,24 @@ a {
   transition: color .2s;
 }
 
+#capability_commitments_table {
+  border-spacing: 10px;
+}
+
 textarea, input, select {
   font-family: Montserrat;
   font-size: 16px;
   width: 100%;
+  border-radius: 6px;
+  border-width: 1px;
+  min-height: 50px;
+  padding: 5px;
+  max-width: 330px;
+  max-height: 300px;
+
+  &:hover {
+    border-color: rgba(3, 34, 140, 0.67);
+  }
 }
 
 tbody, td, tfoot, th, thead, tr {
@@ -39,6 +57,20 @@ tbody, td, tfoot, th, thead, tr {
   border-style: solid;
   border-width: 0;
   padding: 5px;
+  line-height: 1;
+}
+
+.thead {
+  height: 70px;
+  border-radius: 10px;
+  background: rgba(35, 163, 6, 0.48);
+  font-weight: 500;
+  border: 1px solid #23a306;
+
+  td {
+    border-right: 1px solid gray;
+    text-align: center;
+  }
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
